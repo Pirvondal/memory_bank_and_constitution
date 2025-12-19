@@ -1,5 +1,3 @@
-markdown
-
 # Memory Bank & Constitutional AI Agent System 🧠
 
 > A deterministic framework for transforming LLMs into stateless, documentation-driven software engineers.
@@ -7,60 +5,75 @@ markdown
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
+---
+
 ## 🎯 Core Philosophy
 
-Imagine an expert developer with perfect architectural discipline who suffers complete amnesia after every session. To function, they rely **entirely** on:
-1. **A Constitution** (`AGENTS-Constitution.md`) - The unbreakable law of the project
-2. **A Memory Bank** - A living record of goals, context, progress, and decisions
+Imagine an expert developer with perfect architectural discipline who suffers complete amnesia after every session.  
+To function, they rely **entirely** on two artifacts:
 
-This constraint becomes a superpower: **perfect documentation, reproducible reasoning, and architecture-first development.**
+1. **A Constitution (`AGENTS-Constitution.md`)**  
+   The non-negotiable technical law of the project.
+
+2. **A Memory Bank (`MemoryBank.md` + context files)**  
+   A living, versioned record of goals, architecture, decisions, and progress.
+
+This constraint becomes a superpower:
+
+> **Perfect documentation · Reproducible reasoning · Architecture-first development**
+
+---
 
 ## 📁 Repository Structure
 
+```text
 memory-bank/
-├── MemoryBank.md # Operational protocol & RAGESe framework
-├── AGENTS-Constitution.md # Supreme technical law (non-negotiable rules)
-├── projectbrief.md # Strategic "why" and core goals
-├── productContext.md # User problems & experience
-├── systemPatterns.md # Architecture & design patterns
-├── techContext.md # Tech stack & tools
-├── activeContext.md # Current state & recent changes
-└── progress.md # Evolution log & decision history
-text
+├── MemoryBank.md           # Operational protocol & RAGESe framework
+├── AGENTS-Constitution.md  # Supreme technical law (non-negotiable rules)
+├── projectbrief.md         # Strategic "why" and success criteria
+├── productContext.md       # User problems & experience goals
+├── systemPatterns.md       # Architecture & design patterns
+├── techContext.md          # Tech stack, tools, constraints
+├── activeContext.md        # Current state & focus
+└── progress.md             # Evolution log & decision history
+```
 
+---
 
 ## 🚀 Quick Start
 
-### 1. Clone into Your Project
+### 1️⃣ Clone Into Your Project
+
 ```bash
 git clone https://github.com/Pirvondal/memory_bank_and_constitution.git
 cp -r memory_bank_and_constitution/memory-bank ./memory-bank
+```
 
-2. Customize the Constitution
+### 2️⃣ Customize the Constitution
 
-Edit memory-bank/AGENTS-Constitution.md:
+Edit `memory-bank/AGENTS-Constitution.md`:
 
-    Adjust Python version (if needed)
+- Adjust language/runtime versions
+- Define architectural layers
+- Set code quality, testing, and design rules
 
-    Modify project structure layers
+> ⚠️ This file acts as **project law**. Change it deliberately.
 
-    Set your own code quality rules
+### 3️⃣ Initialize Your Context
 
-3. Initialize Your Context
+Fill these first:
 
-Fill these key files first:
+- `projectbrief.md` — Why the project exists
+- `techContext.md` — Actual tech stack
+- `systemPatterns.md` — Architecture & boundaries
 
-    projectbrief.md - Why this project exists
+---
 
-    techContext.md - Your actual tech stack
+## 🤖 First Prompt — Boot Protocol
 
-    systemPatterns.md - Your architecture
+Use **exactly** this prompt to initialize an AI agent:
 
-🤖 First Prompt: Boot Protocol
-
-Copy this exact prompt to start:
-text
-
+```text
 You are operating under a stateless execution model.
 
 STEP 1 — MANDATORY CONTEXT LOAD
@@ -71,14 +84,14 @@ Read and internalize the following files from the `memory-bank/` directory:
 Do not proceed until both are fully read.
 
 STEP 2 — ACKNOWLEDGEMENT
-Explicitly confirm the following in your response:
-- That you have read MemoryBank.md and AGENTS-Constitution.md
-- That you understand and accept RAGESe, the Context Integrity Gateway, and the constitutional authority of AGENTS-Constitution.md
-- That you will not assume any undocumented knowledge
+Explicitly confirm:
+- You have read and understood both files
+- You accept RAGESe, the Context Integrity Gateway, and constitutional authority
+- You will assume no undocumented knowledge
 
 STEP 3 — PROJECT ANALYSIS
-Scan the existing project codebase and structure.
-Based strictly on observable reality (not assumptions), identify whether the following Memory Bank files exist and are accurate:
+Scan the existing codebase.
+Identify whether these files exist and are accurate:
 - projectbrief.md
 - productContext.md
 - systemPatterns.md
@@ -88,154 +101,152 @@ Based strictly on observable reality (not assumptions), identify whether the fol
 
 STEP 4 — SYNTHESIS
 For each missing or outdated file:
-- Propose creating or updating it
-- Derive its content from:
-  - Existing code
-  - Project structure
-  - Tests
-  - Configuration files
+- Propose creation or update
+- Derive content strictly from observable code and config
 - Do NOT invent requirements or architecture
 
 STEP 5 — GATEWAY
-Before evolving any documentation, pass the Context Integrity Gateway.
-If undocumented reality or contradictions are found:
-- STOP
-- Document them as Context Anomalies
-- Escalate for confirmation before proceeding
+Before evolving documentation:
+- Pass the Context Integrity Gateway
+- Escalate anomalies for confirmation
 
-Do not write code yet.
-Do not optimize.
-Do not refactor.
+Do NOT write code yet.
 
-First respond ONLY with:
-1. Confirmation of compliance
-2. A clear plan for documentation synthesis
+Respond ONLY with:
+1. Compliance confirmation
+2. Documentation synthesis plan
+```
 
-🔄 Follow-up Prompts (Daily Work)
-markdown
+---
 
-As per MemoryBank.md protocol, reconfirm your operational state:
-- Re-read all Memory Bank core files.
-- Re-anchor to project goals and AGENTS-Constitution.md.
+## 🔄 Daily Work Prompt
 
-TASK: [Your specific task here]
-CONSTITUTIONAL ARTICLES: This task directly implicates:
-- Art. 2 (Layered Structure): New code must be placed in correct layers.
-- Art. 4 (Dependency Law): Depend on abstractions, not concretions.
-- Art. 7 (Testing Law): Mandatory unit tests required.
+```text
+As per MemoryBank.md protocol:
+
+- Re-read all Memory Bank files
+- Re-anchor to project goals and AGENTS-Constitution.md
+
+TASK: [Describe the task]
+
+CONSTITUTIONAL ARTICLES INVOLVED:
+- Art. X — [Rule name]
+- Art. Y — [Rule name]
 
 Execute the task.
-**Before reporting completion, you MUST:**
-1. Pass the Context Integrity Gateway for any changed or new context.
-2. Update documentation as a first-class artifact:
-   - activeContext.md: Log the change under "Recent Changes"
-   - progress.md: Add a "Decision Log" entry with rationale
-3. Ensure all code complies with all triggered Constitutional Articles.
 
-Your final response must include:
-- Summary of implementation steps
-- Confirmation of Constitutional compliance
-- Exact copy of the updates made to activeContext.md and progress.md
+Before completion:
+1. Pass the Context Integrity Gateway
+2. Update:
+   - activeContext.md (Recent Changes)
+   - progress.md (Decision Log)
+3. Confirm full constitutional compliance
 
-🧩 The RAGESe Protocol
+Final response MUST include:
+- Implementation summary
+- Compliance confirmation
+- Exact documentation updates
+```
 
-The agent's operational cycle defined in MemoryBank.md:
-Step	Question Answered	Action
-Retrieve	"What do I know?"	Read ALL Memory Bank files
-Anchor	"What can't change?"	Lock to project goals & Constitution
-Ground	"What's real now?"	Base decisions on actual code
-Evaluate	"Does this fit?"	Check against rules & patterns
-Synthesize	"What to build?"	Generate solutions
-evolve	"How to remember?"	Update Memory Bank
-🛡️ Context Integrity Gateway
+---
 
-The quality gate before any documentation update requires:
+## 🧩 RAGESe Protocol
 
-    Cross-file validation - Changes must be consistent across all files
+| Step       | Question Answered        | Action                                  |
+|------------|--------------------------|------------------------------------------|
+| Retrieve   | What do I know?          | Read ALL Memory Bank files                |
+| Anchor     | What cannot change?      | Lock to goals & Constitution              |
+| Ground     | What is real right now?  | Inspect actual code & state               |
+| Evaluate   | Does this fit?           | Check rules & architecture                |
+| Synthesize | What should be built?    | Produce solution                          |
+| evolve     | How do we remember?      | Update Memory Bank                        |
 
-    Decision logging - Every significant change gets rationale in progress.md
+---
 
-    Anomaly escalation - Contradictions are flagged immediately
+## 🛡️ Context Integrity Gateway
 
-📋 Example Workflow: Adding a Feature
-python
+Before any documentation evolution:
 
-# Scenario: Add "password reset" to authentication service
+- **Cross-file validation** — No contradictions allowed
+- **Decision logging** — Rationale recorded in `progress.md`
+- **Anomaly escalation** — Undocumented reality must be flagged
 
-1. USER: Gives follow-up prompt with task
-2. AGENT: Executes RAGESe:
-   - Reads Memory Bank, learns auth structure
-   - Checks Constitution (interfaces first, tests required)
-   - Examines existing UserRepository
-   - Creates PasswordResetService + interface
-   - Writes unit tests
-   - Updates activeContext.md & progress.md
-3. AGENT: Passes Context Integrity Gateway
-4. AGENT: Delivers code + documentation updates
+This is the system’s immune response against architectural drift.
 
-🎖️ Best Practices
+---
 
-    Start small - Begin with a well-defined feature
+## 📋 Example Workflow — Adding a Feature
 
-    Customize early - Adjust Constitution before heavy use
+```text
+Scenario: Add "password reset" feature
 
-    Trust anomalies - Gateway flags real contradictions
+1. User issues task prompt
+2. Agent executes RAGESe:
+   - Reads Memory Bank
+   - Validates Constitution
+   - Designs interface-first solution
+   - Writes tests and implementation
+   - Updates documentation
+3. Agent passes Context Integrity Gateway
+4. Agent delivers code + memory updates
+```
 
-    Review logs - Check progress.md regularly
+---
 
-    Be specific - Clear tasks yield better results
+## 🎖️ Best Practices
 
-🔧 Adaptation Guide
-For Non-Python Projects
+- Start small and explicit
+- Customize Constitution early
+- Trust anomaly detection
+- Review `progress.md` regularly
+- Prefer clarity over speed
 
-Modify AGENTS-Constitution.md:
+---
 
-    Sections 1 (Dev Environment)
+## 🔧 Adaptation Guide
 
-    Sections 6-7 (Python-specific rules)
+### Non-Python Projects
+- Modify Constitution runtime/tooling sections
+- Update `techContext.md` accordingly
 
-    Update tech stack in techContext.md
+### Different Architectures
+- Redefine layers in Constitution
+- Align `systemPatterns.md`
+- Preserve dependency rules
 
-For Different Architectures
+### Adding Custom Rules
+- Add new constitutional articles
+- Reference them in Memory Bank & Gateway
 
-    Update layer definitions in Constitution Section 2
+---
 
-    Modify systemPatterns.md accordingly
+## ❓ FAQ
 
-    Maintain the dependency rule consistency
+**Do I need long prompts every time?**  
+No. After boot, short protocol-based prompts are sufficient.
 
-Adding Custom Rules
+**Which models work best?**  
+Models with large context windows (GPT-4+, Claude 3.5+, etc.).
 
-    Add new articles to Constitution
+**Is Clean Architecture mandatory?**  
+No. Consistency is mandatory — not a specific architecture.
 
-    Reference them in Memory Bank protocol
+**Can this scale to large projects?**  
+Yes. Use hierarchical Memory Bank files and summaries.
 
-    Update Context Integrity Gateway matrix
+---
 
-❓ FAQ
-Q: Do I need long prompts every time?
-
-A: No. After boot, use: "As per protocol, implement [feature]. Ensure Constitution compliance and update Memory Bank."
-Q: Which AI models work best?
-
-A: Models with large context windows (Claude 3.5 Sonnet, GPT-4, etc.) that can read all files simultaneously.
-Q: What if my project doesn't use Clean Architecture?
-
-A: Modify AGENTS-Constitution.md Section 2 to match your actual architecture. The system enforces consistency, not a specific pattern.
-Q: How to handle large projects?
-
-A: The system scales naturally: progress.md summarizes, systemPatterns.md references sub-documents. Maintain hierarchical relationships.
-🤝 Contributing
+## 🤝 Contributing
 
 We welcome:
+- Constitutions for other languages (Go, Rust, TypeScript)
+- Automation & bootstrap tools
+- Real-world case studies
 
-    Constitution templates for other languages (Go, Rust, TypeScript, etc.)
+See `CONTRIBUTING.md`.
 
-    Integration scripts (auto-initialize from existing projects)
+---
 
-    Case studies & examples
+## 📜 License
 
-See CONTRIBUTING.md for guidelines.
-📜 License
-
-MIT License - see LICENSE file for details.
+MIT License — see `LICENSE`.
