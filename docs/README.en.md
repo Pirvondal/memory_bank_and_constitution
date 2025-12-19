@@ -1,6 +1,6 @@
 # Memory Bank & Constitutional AI Agent System 🧠
 
-[English](docs/README.en.md) | [Türkçe](docs/README.tr.md) | [Azərbaycan](docs/README.az.md) | [Deutsch](docs/README.de.md) | [Français](docs/README.fr.md) | [Español](docs/README.es.md)
+[English](README.en.md) | [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 
 > A deterministic framework for transforming LLMs into stateless, documentation-driven software engineers.
 
