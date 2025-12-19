@@ -38,21 +38,25 @@ memory-bank/
 ├── techContext.md          # Teknoloji yığını, araçlar, kısıtlar
 ├── activeContext.md        # Güncel durum & odak noktası
 └── progress.md             # Evrim günlüğü & karar geçmişi
+```
+
+---
 
 🚀 Hızlı Başlangıç
+
 1️⃣ Projeye Klonla
 
+```bash
 git clone https://github.com/Pirvondal/memory_bank_and_constitution.git
 cp -r memory_bank_and_constitution/memory-bank ./memory-bank
+```
 
 2️⃣ Constitution’u Özelleştir
 
 memory-bank/AGENTS-Constitution.md dosyasını düzenle:
 
     Dil/sürüm bilgilerini ayarla
-
     Mimari katmanları tanımla
-
     Kod kalitesi, test ve tasarım kurallarını belirle
 
     ⚠️ Bu dosya proje yasasıdır. Değişiklikleri bilinçli yap.
@@ -62,15 +66,16 @@ memory-bank/AGENTS-Constitution.md dosyasını düzenle:
 Öncelikle şu dosyaları doldur:
 
     projectbrief.md — Projenin varlık nedeni
-
     techContext.md — Kullanılan teknoloji yığını
-
     systemPatterns.md — Mimari yapı ve sınırlar
+
+---
 
 🤖 İlk Prompt — Boot Protocol
 
 AI ajanını başlatmak için tam olarak şu prompt’u kullan:
 
+```text
 You are operating under a stateless execution model.
 
 STEP 1 — MANDATORY CONTEXT LOAD
@@ -112,9 +117,13 @@ Do NOT write code yet.
 Respond ONLY with:
 1. Compliance confirmation
 2. Documentation synthesis plan
+```
+
+---
 
 🔄 Günlük Çalışma Prompt’u
 
+```text
 As per MemoryBank.md protocol:
 
 - Re-read all Memory Bank files
@@ -139,28 +148,38 @@ Final response MUST include:
 - Implementation summary
 - Compliance confirmation
 - Exact documentation updates
+```
+
+---
 
 🧩 RAGESe Protokolü
-Adım	Cevaplanan Soru	Eylem
-Retrieve	Ne biliyorum?	Tüm Memory Bank dosyalarını oku
-Anchor	Ne değişemez?	Hedeflere & Constitution’a sabitlen
-Ground	Şu anda ne gerçek?	Gerçek kodu & durumu incele
-Evaluate	Bu uygun mu?	Kurallar & mimariyle doğrula
-Synthesize	Ne inşa edilmeli?	Çözümü üret
-evolve	Nasıl hatırlayacağız?	Memory Bank’i güncelle
+
+| Adım       | Cevaplanan Soru       | Eylem                               |
+| ---------- | --------------------- | ----------------------------------- |
+| Retrieve   | Ne biliyorum?         | Tüm Memory Bank dosyalarını oku     |
+| Anchor     | Ne değişemez?         | Hedeflere & Constitution’a sabitlen |
+| Ground     | Şu anda ne gerçek?    | Gerçek kodu & durumu incele         |
+| Evaluate   | Bu uygun mu?          | Kurallar & mimariyle doğrula        |
+| Synthesize | Ne inşa edilmeli?     | Çözümü üret                         |
+| evolve     | Nasıl hatırlayacağız? | Memory Bank’i güncelle              |
+
+---
+
 🛡️ Context Integrity Gateway
 
 Herhangi bir dokümantasyon evriminden önce:
 
     Dosyalar arası doğrulama — Çelişki olmamalı
-
     Karar kaydı — Gerekçe progress.md içinde tutulmalı
-
     Anomali yükseltme — Belirlenmemiş gerçeklikler rapor edilmeli
 
 Bu mekanizma, mimari sapmaya (architectural drift) karşı sistemin bağışıklığıdır.
+
+---
+
 📋 Örnek Akış — Bir Özellik Ekleme
 
+```text
 Senaryo: "Şifre sıfırlama" özelliğini ekle
 
 1. Kullanıcı görevi belirtir
@@ -172,39 +191,36 @@ Senaryo: "Şifre sıfırlama" özelliğini ekle
    - Dokümantasyonu günceller
 3. Agent Context Integrity Gateway’den geçer
 4. Agent kodu + bellek güncellemelerini teslim eder
+```
+
+---
 
 🎖️ En İyi Uygulamalar
 
     Küçük ve açık adımlarla başla
-
     Constitution’u erken özelleştir
-
     Anomali tespitine güven
-
     progress.md dosyasını düzenli gözden geçir
-
     Hızdan ziyade açıklığa öncelik ver
 
+---
+
 🔧 Uyarlama Rehberi
+
 Python Dışı Projeler
-
     Constitution’daki runtime/araç bölümlerini değiştir
-
     techContext.md dosyasını güncelle
 
 Farklı Mimariler
-
     Constitution’daki katmanları yeniden tanımla
-
     systemPatterns.md ile hizala
-
     Bağımlılık kurallarını koru
 
 Özel Kurallar Ekleme
-
     Yeni anayasal maddeler ekle
-
     Bunları Memory Bank & Gateway içinde referansla
+
+---
 
 ❓ SSS
 
@@ -219,17 +235,20 @@ Hayır. Zorunlu olan tutarlılıktır — belirli bir mimari değil.
 
 Bu sistem büyük projelere ölçeklenebilir mi?
 Evet. Hiyerarşik Memory Bank dosyaları ve özetler kullanarak ölçeklenebilir.
+
+---
+
 🤝 Katkıda Bulunma
 
 Şunları memnuniyetle kabul ediyoruz:
-
     Diğer diller için Constitution’lar (Go, Rust, TypeScript, vb.)
-
     Otomasyon & bootstrap araçları
-
     Gerçek dünya vaka çalışmaları
 
 Ayrıntılar için CONTRIBUTING.md dosyasına bak.
+
+---
+
 📜 Lisans
 
 MIT Lisansı — ayrıntılar için LICENSE dosyasına bak.
