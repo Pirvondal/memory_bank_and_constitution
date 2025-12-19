@@ -1,6 +1,6 @@
 # Memory Bank & Constitutional AI Agent System 🧠
 
-[English](README.en.md) | [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
+[English](docs/README.en.md) | [Türkçe](docs/README.tr.md) | [Azərbaycan](docs/README.az.md) | [Deutsch](docs/README.de.md) | [Français](docs/README.fr.md) | [Español](docs/README.es.md)
 
 > Deterministik bir çerçeve: LLM’leri stateless, dokümantasyon odaklı yazılım mühendislerine dönüştürmek için.
 
