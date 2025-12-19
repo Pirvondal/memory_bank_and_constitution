@@ -1,94 +1,99 @@
-# Memory Bank & Constitutional AI Agent System 🧠
+# Banque de Mémoire & Système d'Agent IA Constitutionnel 🧠
 
-[English](README.en.md) | [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
+[Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 
-> Un cadre déterministe pour transformer les LLMs en ingénieurs logiciels sans état, guidés par la documentation.
+> Un cadre déterministe pour transformer les LLM en ingénieurs logiciels sans état et pilotés par la documentation.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ---
 
-## 🎯 Philosophie Fondamentale
+## 🎯 Philosophie de Base
 
-Imaginez un développeur expert avec une discipline architecturale parfaite — mais souffrant d’une **amnésie totale** après chaque session.  
-Pour fonctionner, il s’appuie exclusivement sur deux artefacts :
+Imaginez un développeur expert avec une discipline architecturale parfaite qui souffre d'amnésie complète après chaque session.
+Pour fonctionner, il s'appuie **entièrement** sur deux artefacts :
 
-1. **Constitution (`AGENTS-Constitution.md`)**  
-   La loi technique suprême du projet.
+1.  **Une Constitution (`AGENTS-Constitution.md`)**
+    La loi technique non négociable du projet.
 
-2. **Memory Bank (`MemoryBank.md` + fichiers de contexte)**  
-   Un enregistrement vivant et versionné des objectifs, de l’architecture, des décisions et des progrès.
+2.  **Une Banque de Mémoire (`MemoryBank.md` + fichiers de contexte)**
+    Un enregistrement vivant et versionné des objectifs, de l'architecture, des décisions et des progrès.
 
-Cette contrainte devient une force :
+Cette contrainte devient un super-pouvoir :
 
-> **Documentation parfaite · Raisonnement reproductible · Développement orienté architecture**
+> **Documentation parfaite · Raisonnement reproductible · Développement axé sur l'architecture**
 
 ---
 
-## 📁 Structure du Répertoire
+## 📁 Structure du Référentiel
 
 ```text
 memory-bank/
-├── MemoryBank.md           # Protocole opérationnel & framework RAGESe
+├── MemoryBank.md           # Protocole opérationnel & cadre RAGESe
 ├── AGENTS-Constitution.md  # Loi technique suprême (règles non négociables)
-├── projectbrief.md         # Stratégie “pourquoi” et critères de succès
-├── productContext.md       # Problèmes utilisateur & objectifs d’expérience
+├── projectbrief.md         # "Pourquoi" stratégique et critères de succès
+├── productContext.md       # Problèmes utilisateurs & objectifs d'expérience
 ├── systemPatterns.md       # Architecture & modèles de conception
-├── techContext.md          # Stack technologique, outils, contraintes
+├── techContext.md          # Pile technique, outils, contraintes
 ├── activeContext.md        # État actuel & focus
-└── progress.md             # Journal d’évolution & historique des décisions
+└── progress.md             # Journal d'évolution & historique des décisions
+```
 
-🚀 Démarrage Rapide
-1️⃣ Cloner dans votre projet
+---
 
+## 🚀 Démarrage Rapide
+
+### 1️⃣ Cloner dans Votre Projet
+
+```bash
 git clone https://github.com/Pirvondal/memory_bank_and_constitution.git
 cp -r memory_bank_and_constitution/memory-bank ./memory-bank
+```
 
-2️⃣ Personnaliser la Constitution
+### 2️⃣ Personnaliser la Constitution
 
-Modifier memory-bank/AGENTS-Constitution.md :
+Modifiez `memory-bank/AGENTS-Constitution.md` :
 
-    Ajuster les versions de langage/environnement
+- Ajustez les versions de langue/d'exécution
+- Définissez les couches architecturales
+- Définissez les règles de qualité du code, de test et de conception
 
-    Définir les couches architecturales
+> ⚠️ Ce fichier agit comme **loi du projet**. Changez-le délibérément.
 
-    Fixer les règles de qualité du code, de test et de conception
+### 3️⃣ Initialiser Votre Contexte
 
-    ⚠️ Ce fichier agit comme la loi du projet. Modifiez-le avec prudence.
+Remplissez ceux-ci en premier :
 
-3️⃣ Initialiser le Contexte
+- `projectbrief.md` — Pourquoi le projet existe
+- `techContext.md` — Pile technique réelle
+- `systemPatterns.md` — Architecture & limites
 
-Remplir en priorité :
+---
 
-    projectbrief.md — Raison d’être du projet
+## 🤖 Première Invite — Protocole de Démarrage
 
-    techContext.md — Stack technologique utilisée
+Utilisez **exactement** cette invite pour initialiser un agent IA :
 
-    systemPatterns.md — Architecture et limites
+```text
+Vous opérez sous un modèle d'exécution sans état.
 
-🤖 Premier Prompt — Boot Protocol
-
-Utiliser exactement ce prompt pour initialiser un agent IA :
-
-You are operating under a stateless execution model.
-
-STEP 1 — MANDATORY CONTEXT LOAD
-Read and internalize the following files from the `memory-bank/` directory:
+ÉTAPE 1 — CHARGEMENT DE CONTEXTE OBLIGATOIRE
+Lisez et internalisez les fichiers suivants du répertoire `memory-bank/` :
 1. MemoryBank.md
 2. AGENTS-Constitution.md
 
-Do not proceed until both are fully read.
+Ne procédez pas tant que les deux ne sont pas entièrement lus.
 
-STEP 2 — ACKNOWLEDGEMENT
-Explicitly confirm:
-- You have read and understood both files
-- You accept RAGESe, the Context Integrity Gateway, and constitutional authority
-- You will assume no undocumented knowledge
+ÉTAPE 2 — RECONNAISSANCE
+Confirmez explicitement :
+- Vous avez lu et compris les deux fichiers
+- Vous acceptez RAGESe, la Passerelle d'Intégrité du Contexte et l'autorité constitutionnelle
+- Vous ne supposerez aucune connaissance non documentée
 
-STEP 3 — PROJECT ANALYSIS
-Scan the existing codebase.
-Identify whether these files exist and are accurate:
+ÉTAPE 3 — ANALYSE DU PROJET
+Analysez la base de code existante.
+Identifiez si ces fichiers existent et sont exacts :
 - projectbrief.md
 - productContext.md
 - systemPatterns.md
@@ -96,140 +101,154 @@ Identify whether these files exist and are accurate:
 - activeContext.md
 - progress.md
 
-STEP 4 — SYNTHESIS
-For each missing or outdated file:
-- Propose creation or update
-- Derive content strictly from observable code and config
-- Do NOT invent requirements or architecture
+ÉTAPE 4 — SYNTHÈSE
+Pour chaque fichier manquant ou obsolète :
+- Proposez la création ou la mise à jour
+- Dérivez le contenu strictement du code et de la configuration observables
+- N'INVENTEZ PAS d'exigences ou d'architecture
 
-STEP 5 — GATEWAY
-Before evolving documentation:
-- Pass the Context Integrity Gateway
-- Escalate anomalies for confirmation
+ÉTAPE 5 — PASSERELLE
+Avant d'évoluer la documentation :
+- Passez la Passerelle d'Intégrité du Contexte
+- Escaladez les anomalies pour confirmation
 
-Do NOT write code yet.
+N'écrivez PAS encore de code.
 
-Respond ONLY with:
-1. Compliance confirmation
-2. Documentation synthesis plan
+Répondez UNIQUEMENT avec :
+1. Confirmation de conformité
+2. Plan de synthèse de la documentation
+```
 
-🔄 Prompt de Travail Quotidien
+---
 
-As per MemoryBank.md protocol:
+## 🔄 Invite de Travail Quotidienne
 
-- Re-read all Memory Bank files
-- Re-anchor to project goals and AGENTS-Constitution.md
+```text
+Selon le protocole MemoryBank.md :
 
-TASK: [Description de la tâche]
+- Relisez tous les fichiers de la Banque de Mémoire
+- Ré-ancrez aux objectifs du projet et à AGENTS-Constitution.md
 
-CONSTITUTIONAL ARTICLES INVOLVED:
+TÂCHE : [Décrivez la tâche]
+
+ARTICLES CONSTITUTIONNELS IMPLIQUÉS :
 - Art. X — [Nom de la règle]
 - Art. Y — [Nom de la règle]
 
-Execute the task.
+Exécutez la tâche.
 
-Before completion:
-1. Pass the Context Integrity Gateway
-2. Update:
-   - activeContext.md (Changements récents)
-   - progress.md (Journal des décisions)
-3. Confirm full constitutional compliance
+Avant l'achèvement :
+1. Passez la Passerelle d'Intégrité du Contexte
+2. Mettez à jour :
+   - activeContext.md (Changements Récents)
+   - progress.md (Journal des Décisions)
+3. Confirmez la pleine conformité constitutionnelle
 
-Final response MUST include:
-- Implementation summary
-- Compliance confirmation
-- Exact documentation updates
+La réponse finale DOIT inclure :
+- Résumé de l'implémentation
+- Confirmation de conformité
+- Mises à jour exactes de la documentation
+```
 
-🧩 Protocole RAGESe
-Étape	Question traitée	Action
-Retrieve	Que sais-je ?	Lire tous les fichiers Memory Bank
-Anchor	Qu’est-ce qui est fixe ?	S’ancrer aux objectifs & à la Constitution
-Ground	Quelle est la réalité ?	Examiner le code et l’état actuels
-Evaluate	Cela correspond-il ?	Vérifier les règles & l’architecture
-Synthesize	Que faut-il construire ?	Produire la solution
-evolve	Comment s’en souvenir ?	Mettre à jour la Memory Bank
-🛡️ Context Integrity Gateway
+---
+
+## 🧩 Protocole RAGESe
+
+| Étape      | Question Répondue        | Action                                   |
+|------------|--------------------------|------------------------------------------|
+| Retrieve   | Que sais-je ?            | Lire TOUS les fichiers de la Banque de Mémoire |
+| Anchor     | Qu'est-ce qui ne peut pas changer ? | Verrouiller sur les objectifs & la Constitution |
+| Ground     | Qu'est-ce qui est réel maintenant ? | Inspecter le code & l'état réels         |
+| Evaluate   | Est-ce que cela correspond ? | Vérifier les règles & l'architecture     |
+| Synthesize | Que faut-il construire ? | Produire une solution                    |
+| evolve     | Comment nous souvenons-nous ? | Mettre à jour la Banque de Mémoire       |
+
+---
+
+## 🛡️ Passerelle d'Intégrité du Contexte
 
 Avant toute évolution de la documentation :
 
-    Validation inter-fichiers — Aucune contradiction permise
+- **Validation inter-fichiers** — Aucune contradiction autorisée
+- **Journalisation des décisions** — Justifications enregistrées dans `progress.md`
+- **Escalade des anomalies** — La réalité non documentée doit être signalée
 
-    Journalisation des décisions — Raison consignée dans progress.md
+C'est la réponse immunitaire du système contre la dérive architecturale.
 
-    Escalade des anomalies — Les réalités non documentées doivent être signalées
+---
 
-C’est le système immunitaire contre la dérive architecturale.
-📋 Exemple de Flux — Ajouter une Fonctionnalité
+## 📋 Exemple de Flux de Travail — Ajout d'une Fonctionnalité
 
-Scénario : Ajouter une fonctionnalité "réinitialisation de mot de passe"
+```text
+Scénario : Ajouter la fonctionnalité "réinitialisation du mot de passe"
 
-1. L’utilisateur définit la tâche  
-2. L’agent exécute le protocole RAGESe :
-   - Lit la Memory Bank
+1. L'utilisateur émet l'invite de tâche
+2. L'agent exécute RAGESe :
+   - Lit la Banque de Mémoire
    - Valide la Constitution
-   - Conçoit la solution en priorité par l’interface
-   - Écrit les tests et l’implémentation
+   - Conçoit d'abord la solution d'interface
+   - Écrit les tests et l'implémentation
    - Met à jour la documentation
-3. L’agent passe le Context Integrity Gateway
-4. L’agent livre le code + les mises à jour mémoire
+3. L'agent passe la Passerelle d'Intégrité du Contexte
+4. L'agent livre le code + les mises à jour de mémoire
+```
 
-🎖️ Bonnes Pratiques
+---
 
-    Commencer petit et explicite
+## 🎖️ Meilleures Pratiques
 
-    Personnaliser la Constitution dès le départ
+- Commencez petit et explicite
+- Personnalisez la Constitution tôt
+- Faites confiance à la détection d'anomalies
+- Examinez `progress.md` régulièrement
+- Préférez la clarté à la vitesse
 
-    Faire confiance à la détection d’anomalies
+---
 
-    Revoir régulièrement progress.md
+## 🔧 Guide d'Adaptation
 
-    Préférer la clarté à la vitesse
+### Projets Non-Python
+- Modifiez les sections runtime/outils de la Constitution
+- Mettez à jour `techContext.md` en conséquence
 
-🔧 Guide d’Adaptation
-Projets non-Python
+### Architectures Différentes
+- Redéfinissez les couches dans la Constitution
+- Alignez `systemPatterns.md`
+- Préservez les règles de dépendance
 
-    Modifier les sections runtime/outils dans la Constitution
+### Ajout de Règles Personnalisées
+- Ajoutez de nouveaux articles constitutionnels
+- Référencez-les dans la Banque de Mémoire & la Passerelle
 
-    Mettre à jour techContext.md
+---
 
-Architectures Différentes
+## ❓ FAQ
 
-    Redéfinir les couches dans la Constitution
+**Ai-je besoin de longues invites à chaque fois ?**
+Non. Après le démarrage, de courtes invites basées sur le protocole suffisent.
 
-    Aligner avec systemPatterns.md
-
-    Préserver les règles de dépendance
-
-Ajouter des Règles Personnalisées
-
-    Ajouter de nouveaux articles constitutionnels
-
-    Les référencer dans la Memory Bank & Gateway
-
-❓ FAQ
-
-Dois-je utiliser de longs prompts à chaque fois ?
-Non. Après l’initialisation, des prompts courts basés sur le protocole suffisent.
-
-Quels modèles fonctionnent le mieux ?
+**Quels modèles fonctionnent le mieux ?**
 Les modèles avec de grandes fenêtres de contexte (GPT-4+, Claude 3.5+, etc.).
 
-Clean Architecture est-elle obligatoire ?
-Non. Ce qui est obligatoire, c’est la cohérence — pas un style d’architecture particulier.
+**La Clean Architecture est-elle obligatoire ?**
+Non. La cohérence est obligatoire — pas une architecture spécifique.
 
-Ce système est-il évolutif pour de grands projets ?
-Oui. Grâce à des fichiers Memory Bank hiérarchiques et des résumés.
-🤝 Contributions
+**Cela peut-il passer à l'échelle pour de grands projets ?**
+Oui. Utilisez des fichiers de Banque de Mémoire hiérarchiques et des résumés.
 
-Nous acceptons :
+---
 
-    Des Constitutions pour d’autres langages (Go, Rust, TypeScript, etc.)
+## 🤝 Contribuer
 
-    Des outils d’automatisation et de bootstrap
+Nous accueillons :
+- Constitutions pour d'autres langues (Go, Rust, TypeScript)
+- Outils d'automatisation & d'amorçage
+- Études de cas du monde réel
 
-    Des études de cas réelles
+Voir `CONTRIBUTING.md`.
 
-Voir CONTRIBUTING.md.
-📜 Licence
+---
 
-Licence MIT — voir LICENSE.
+## 📜 Licence
+
+Licence MIT — voir `LICENSE`.

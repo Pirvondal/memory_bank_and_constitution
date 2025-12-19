@@ -1,94 +1,99 @@
-# Memory Bank & Constitutional AI Agent System 🧠
+# Yaddaş Bankı & Konstitusiyalı Sİ Agent Sistemi 🧠
 
-[English](README.en.md) | [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
+[Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 
-> Determinist çərçivə: LLM-ləri vəziyyətsiz (stateless), sənəd yönümlü proqram mühəndislərinə çevirmək üçün.
+> DİM-ləri (Böyük Dil Modellərini) vatansız, sənədləşdirmə əsaslı proqram mühəndislərinə çevirmək üçün deterministik çərçivə.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Lisenziya: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PR-lər Qəbul edilir](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ---
 
 ## 🎯 Əsas Fəlsəfə
 
-Təsəvvür edin ki, mükəmməl memarlıq intizamına malik bir ekspert proqramçı var — lakin hər sessiyadan sonra **tam yaddaş itkisi** yaşayır.  
-Onun işləməsi yalnız iki sənədə əsaslanır:
+Hər sessiyadan sonra tam yaddaş itkisi yaşayan, lakin mükəmməl memarlıq intizamına malik bir ekspert proqramçı təsəvvür edin.
+Fəaliyyət göstərmək üçün o, **tamamilə** iki artefakta güvənir:
 
-1. **Constitution (`AGENTS-Constitution.md`)**  
-   Layihənin dəyişməz texniki qanunu.
+1.  **Konstitusiya (`AGENTS-Constitution.md`)**
+    Layihənin müzakirə olunmayan texniki qanunu.
 
-2. **Memory Bank (`MemoryBank.md` + context faylları)**  
-   Məqsədlərin, memarlığın, qərarların və inkişafın canlı, versiyalaşdırılmış qeydi.
+2.  **Yaddaş Bankı (`MemoryBank.md` + kontekst faylları)**
+    Hədəflərin, memarlığın, qərarların və irəliləyişin canlı, versiyalı qeydi.
 
-Bu məhdudiyyət bir üstünlüyə çevrilir:
+Bu məhdudiyyət bir super gücə çevrilir:
 
-> **Mükəmməl sənədləşmə · Təkrarlana bilən məntiq · Memarlıq əsaslı inkişaf**
+> **Mükəmməl sənədləşdirmə · Təkrarlana bilən məntiq · Memarlıq yönümlü inkişaf**
 
 ---
 
-## 📁 Depo Quruluşu
+## 📁 Repozitoriya Strukturu
 
 ```text
 memory-bank/
-├── MemoryBank.md           # Əməliyyat protokolu & RAGESe framework
-├── AGENTS-Constitution.md  # Ali texniki qanun (dəyişməz qaydalar)
-├── projectbrief.md         # Strateji “niyə” və uğur meyarları
-├── productContext.md       # İstifadəçi problemləri & təcrübə məqsədləri
-├── systemPatterns.md       # Memarlıq & dizayn şablonları
-├── techContext.md          # Texnoloji yığın, alətlər, məhdudiyyətlər
+├── MemoryBank.md           # Əməliyyat protokolu & RAGESe çərçivəsi
+├── AGENTS-Constitution.md  # Ali texniki qanun (müzakirə olunmayan qaydalar)
+├── projectbrief.md         # Strateji "niyə" və uğur meyarları
+├── productContext.md       # İstifadəçi problemləri & təcrübə hədəfləri
+├── systemPatterns.md       # Memarlıq & dizayn nümunələri
+├── techContext.md          # Texnologiya steki, alətlər, məhdudiyyətlər
 ├── activeContext.md        # Cari vəziyyət & fokus
-└── progress.md             # İnkişaf jurnalı & qərar tarixi
+└── progress.md             # Təkamül jurnalı & qərar tarixçəsi
+```
 
-🚀 Sürətli Başlanğıc
-1️⃣ Layihəyə Klon Et
+---
 
+## 🚀 Tez Başlanğıc
+
+### 1️⃣ Layihənizə Klonlayın
+
+```bash
 git clone https://github.com/Pirvondal/memory_bank_and_constitution.git
 cp -r memory_bank_and_constitution/memory-bank ./memory-bank
+```
 
-2️⃣ Constitution-u Fərdiləşdir
+### 2️⃣ Konstitusiyanı Fərdiləşdirin
 
-memory-bank/AGENTS-Constitution.md faylını redaktə et:
+`memory-bank/AGENTS-Constitution.md` faylını redaktə edin:
 
-    Dil və versiya parametrlərini dəyiş
+- Dil/icra mühiti versiyalarını tənzimləyin
+- Memarlıq təbəqələrini təyin edin
+- Kod keyfiyyəti, test və dizayn qaydalarını müəyyənləşdirin
 
-    Memarlıq qatlarını müəyyən et
+> ⚠️ Bu fayl **layihə qanunu** rolunu oynayır. Onu şüurlu şəkildə dəyişdirin.
 
-    Kod keyfiyyəti, test və dizayn qaydalarını tənzimlə
+### 3️⃣ Kontekstinizi Başladın
 
-    ⚠️ Bu fayl layihə qanunudur. Dəyişiklikləri diqqətlə et.
+İlk olaraq bunları doldurun:
 
-3️⃣ Konteksti Başlat
+- `projectbrief.md` — Layihə niyə mövcuddur
+- `techContext.md` — Faktiki texnologiya steki
+- `systemPatterns.md` — Memarlıq & sərhədlər
 
-İlk növbədə bu faylları doldur:
+---
 
-    projectbrief.md — Layihənin mövcudluq səbəbi
+## 🤖 İlk Sorğu — Yükləmə Protokolu
 
-    techContext.md — İstifadə olunan texnologiyalar
+Bir Sİ agentini başlatmaq üçün **dəqiq olaraq** bu sorğudan istifadə edin:
 
-    systemPatterns.md — Memarlıq və sərhədlər
+```text
+Siz vatansız icra modeli altında fəaliyyət göstərirsiniz.
 
-🤖 İlk Prompt — Boot Protocol
-
-AI agenti başlatmaq üçün tam olaraq bu prompt-dan istifadə et:
-
-You are operating under a stateless execution model.
-
-STEP 1 — MANDATORY CONTEXT LOAD
-Read and internalize the following files from the `memory-bank/` directory:
+ADDIM 1 — MƏCBURİ KONTEKST YÜKLƏNMƏSİ
+`memory-bank/` qovluğundan aşağıdakı faylları oxuyun və mənimsəyin:
 1. MemoryBank.md
 2. AGENTS-Constitution.md
 
-Do not proceed until both are fully read.
+Hər ikisi tam oxunmadan davam etməyin.
 
-STEP 2 — ACKNOWLEDGEMENT
-Explicitly confirm:
-- You have read and understood both files
-- You accept RAGESe, the Context Integrity Gateway, and constitutional authority
-- You will assume no undocumented knowledge
+ADDIM 2 — TƏSDİQ
+Açıq şəkildə təsdiqləyin:
+- Hər iki faylı oxudunuz və anladınız
+- RAGESe-ni, Kontekst Bütövlüyü Şlüzünü və konstitusiya səlahiyyətini qəbul edirsiniz
+- Sənədləşdirilməmiş heç bir biliyi fərz etməyəcəksiniz
 
-STEP 3 — PROJECT ANALYSIS
-Scan the existing codebase.
-Identify whether these files exist and are accurate:
+ADDIM 3 — LAYİHƏ ANALİZİ
+Mövcud kod bazasını skan edin.
+Bu faylların mövcud olub-olmadığını və dəqiq olub-olmadığını müəyyənləşdirin:
 - projectbrief.md
 - productContext.md
 - systemPatterns.md
@@ -96,140 +101,154 @@ Identify whether these files exist and are accurate:
 - activeContext.md
 - progress.md
 
-STEP 4 — SYNTHESIS
-For each missing or outdated file:
-- Propose creation or update
-- Derive content strictly from observable code and config
-- Do NOT invent requirements or architecture
+ADDIM 4 — SENTEZ
+Çatışmayan və ya köhnəlmiş hər bir fayl üçün:
+- Yaratma və ya yeniləmə təklif edin
+- Məzmunu ciddi şəkildə müşahidə olunan kod və konfiqurasiyadan çıxarın
+- Tələblər və ya memarlıq İCAD ETMƏYİN
 
-STEP 5 — GATEWAY
-Before evolving documentation:
-- Pass the Context Integrity Gateway
-- Escalate anomalies for confirmation
+ADDIM 5 — ŞLÜZ
+Sənədləşdirməni təkmilləşdirməzdən əvvəl:
+- Kontekst Bütövlüyü Şlüzünü keçin
+- Anomaliyaları təsdiq üçün yüksəldin
 
-Do NOT write code yet.
+Hələ kod yazmayın.
 
-Respond ONLY with:
-1. Compliance confirmation
-2. Documentation synthesis plan
+YALNIZ bunlarla cavab verin:
+1. Uyğunluq təsdiqi
+2. Sənədləşdirmə sentez planı
+```
 
-🔄 Gündəlik İş Prompt-u
+---
 
-As per MemoryBank.md protocol:
+## 🔄 Günlük İş Sorğusu
 
-- Re-read all Memory Bank files
-- Re-anchor to project goals and AGENTS-Constitution.md
+```text
+MemoryBank.md protokoluna əsasən:
 
-TASK: [Tapşırığın təsviri]
+- Bütün Yaddaş Bankı fayllarını yenidən oxuyun
+- Layihə hədəflərinə və AGENTS-Constitution.md-yə yenidən bağlanın
 
-CONSTITUTIONAL ARTICLES INVOLVED:
-- Art. X — [Qayda adı]
-- Art. Y — [Qayda adı]
+TAPŞIRIQ: [Tapşırığı təsvir edin]
 
-Execute the task.
+ƏLAQƏLİ KONSTİTUSİYA MADDƏLƏRİ:
+- Maddə X — [Qayda adı]
+- Maddə Y — [Qayda adı]
 
-Before completion:
-1. Pass the Context Integrity Gateway
-2. Update:
-   - activeContext.md (Son dəyişikliklər)
-   - progress.md (Qərar jurnalı)
-3. Confirm full constitutional compliance
+Tapşırığı icra edin.
 
-Final response MUST include:
-- Implementation summary
-- Compliance confirmation
-- Exact documentation updates
+Tamamlamadan əvvəl:
+1. Kontekst Bütövlüyü Şlüzünü keçin
+2. Yeniləyin:
+   - activeContext.md (Son Dəyişikliklər)
+   - progress.md (Qərar Jurnalı)
+3. Tam konstitusiya uyğunluğunu təsdiqləyin
 
-🧩 RAGESe Protokolu
-Addım	Cavablandırılan sual	Hərəkət
-Retrieve	Nə bilirəm?	Bütün Memory Bank fayllarını oxu
-Anchor	Nə dəyişməzdir?	Məqsədlərə & Constitution-a sabitlən
-Ground	İndi nə realdır?	Faktiki kodu və vəziyyəti yoxla
-Evaluate	Uyğundurmu?	Qaydalara və memarlığa qarşı yoxla
-Synthesize	Nə qurulmalıdır?	Həll yarat
-evolve	Necə xatırlayacağıq?	Memory Bank-i yenilə
-🛡️ Context Integrity Gateway
+Son cavab BUNLARI EHTİVA ETMƏLİDİR:
+- İcra xülasəsi
+- Uyğunluq təsdiqi
+- Dəqiq sənədləşdirmə yeniləmələri
+```
 
-Hər hansı sənəd yeniləməsindən əvvəl:
+---
 
-    Fayllararası yoxlama — Ziddiyyət olmamalıdır
+## 🧩 RAGESe Protokolu
 
-    Qərar qeydləri — Səbəb progress.md faylında saxlanılmalıdır
+| Addım      | Cavablandırılan Sual     | Fəaliyyət                                |
+|------------|--------------------------|------------------------------------------|
+| Retrieve   | Mən nə bilirəm?          | BÜTÜN Yaddaş Bankı fayllarını oxu        |
+| Anchor     | Nə dəyişə bilməz?        | Hədəflərə & Konstitusiyaya bağlan        |
+| Ground     | Hazırda real olan nədir? | Faktiki kodu & vəziyyəti yoxla           |
+| Evaluate   | Bu uyğundurmu?           | Qaydaları & memarlığı yoxla              |
+| Synthesize | Nə qurulmalıdır?         | Həll yolu yarat                          |
+| evolve     | Necə xatırlayırıq?       | Yaddaş Bankını yenilə                    |
 
-    Anomaliya eskalasiyası — Sənədləşdirilməmiş reallıqlar bildirilməlidir
+---
 
-Bu mexanizm memarlıq sürüşməsinə qarşı sistemin “immun reaksiyasıdır”.
-📋 Nümunə İş Axını — Xüsusiyyət Əlavə Etmə
+## 🛡️ Kontekst Bütövlüyü Şlüzü
 
-Ssenari: “Parol sıfırlama” funksiyasını əlavə et
+Hər hansı sənədləşdirmə təkamülündən əvvəl:
 
-1. İstifadəçi tapşırığı verir  
+- **Fayllararası doğrulama** — Ziddiyyətlərə icazə verilmir
+- **Qərar jurnalı** — Əsaslandırmalar `progress.md`-də qeyd olunur
+- **Anomaliya yüksəltmə** — Sənədləşdirilməmiş reallıq işarələnməlidir
+
+Bu, memarlıq sapmalarına qarşı sistemin immunitet reaksiyasıdır.
+
+---
+
+## 📋 Nümunə İş Axını — Xüsusiyyət Əlavə Etmə
+
+```text
+Ssenari: "Şifrə sıfırlama" xüsusiyyəti əlavə et
+
+1. İstifadəçi tapşırıq sorğusunu verir
 2. Agent RAGESe-ni icra edir:
-   - Memory Bank-i oxuyur
-   - Constitution-u yoxlayır
-   - Əvvəl interfeysi dizayn edir
-   - Testləri və implementasiyanı yazır
-   - Sənədləri yeniləyir
-3. Agent Context Integrity Gateway-dən keçir
-4. Agent kodu + yaddaş yeniləmələrini təqdim edir
+   - Yaddaş Bankını oxuyur
+   - Konstitusiyanı doğrular
+   - Əvvəlcə interfeys həllini dizayn edir
+   - Testləri və tətbiqi yazır
+   - Sənədləşdirməni yeniləyir
+3. Agent Kontekst Bütövlüyü Şlüzünü keçir
+4. Agent kodu + yaddaş yeniləmələrini təhvil verir
+```
 
-🎖️ Ən Yaxşı Təcrübələr
+---
 
-    Kiçik və aydın addımlarla başla
+## 🎖️ Ən Yaxşı Təcrübələr
 
-    Constitution-u erkən fərdiləşdir
+- Kiçik və açıq başlayın
+- Konstitusiyanı erkən fərdiləşdirin
+- Anomaliya aşkarlanmasına güvənin
+- `progress.md` faylını mütəmadi olaraq nəzərdən keçirin
+- Sürət əvəzinə aydınlığa üstünlük verin
 
-    Anomaliya aşkarlanmasına etibar et
+---
 
-    progress.md faylını mütəmadi yoxla
+## 🔧 Uyğunlaşdırma Bələdçisi
 
-    Sürətdən çox aydınlığa üstünlük ver
+### Python Olmayan Layihələr
+- Konstitusiya icra mühiti/alətlər bölmələrini dəyişdirin
+- `techContext.md` faylını buna uyğun yeniləyin
 
-🔧 Uyğunlaşdırma Bələdçisi
-Python olmayan layihələr
+### Fərqli Memarlıqlar
+- Konstitusiyadakı təbəqələri yenidən təyin edin
+- `systemPatterns.md` faylını uyğunlaşdırın
+- Asılılıq qaydalarını qoruyun
 
-    Constitution-da runtime/alət hissələrini dəyiş
+### Xüsusi Qaydalar Əlavə Etmə
+- Yeni konstitusiya maddələri əlavə edin
+- Onlara Yaddaş Bankı & Şlüzdə istinad edin
 
-    techContext.md faylını yenilə
+---
 
-Müxtəlif Memarlıqlar
+## ❓ TVS (Tez-tez Verilən Suallar)
 
-    Constitution-da qatları yenidən təyin et
+**Hər dəfə uzun sorğulara ehtiyacım varmı?**
+Xeyr. Yükləmədən sonra, qısa protokol əsaslı sorğular kifayətdir.
 
-    systemPatterns.md ilə uyğunlaşdır
+**Hansı modellər ən yaxşı işləyir?**
+Geniş kontekst pəncərələrinə malik modellər (GPT-4+, Claude 3.5+, və s.).
 
-    Asılılıq qaydalarını qoruyun
+**Təmiz Memarlıq (Clean Architecture) məcburidirmi?**
+Xeyr. Ardıcıllıq məcburidir — konkret bir memarlıq deyil.
 
-Xüsusi Qaydalar Əlavə Etmə
+**Bu böyük layihələrə miqyaslana bilərmi?**
+Bəli. İyerarxik Yaddaş Bankı faylları və xülasələri istifadə edin.
 
-    Yeni konstitusiya maddələri əlavə et
+---
 
-    Onları Memory Bank və Gateway-də istinad et
+## 🤝 Töhfə
 
-❓ FAQ
+Aşağıdakıları məmnuniyyətlə qəbul edirik:
+- Digər dillər üçün Konstitusiyalar (Go, Rust, TypeScript)
+- Avtomatlaşdırma & önyükleme alətləri
+- Real dünya nümunələri
 
-Hər dəfə uzun prompt yazmalıyam?
-Xeyr. İlk başlanğıcdan sonra qısa, protokol əsaslı prompt-lar kifayətdir.
+Bax: `CONTRIBUTING.md`.
 
-Ən yaxşı modellər hansılardır?
-Geniş konteks pəncərəsinə malik modellər (GPT-4+, Claude 3.5+ və s.).
+---
 
-Clean Architecture məcburidirmi?
-Xeyr. Vacib olan ardıcıllıqdır — konkret bir memarlıq deyil.
+## 📜 Lisenziya
 
-Böyük layihələr üçün uyğundurmu?
-Bəli. Hierarxik Memory Bank faylları və xülasələr vasitəsilə miqyaslana bilər.
-🤝 Töhfə Vermə
-
-Qarşıladığımız töhfələr:
-
-    Digər dillər üçün Constitution faylları (Go, Rust, TypeScript və s.)
-
-    Avtomatlaşdırma və bootstrap alətləri
-
-    Real dünya nümunələri
-
-Daha ətraflı üçün CONTRIBUTING.md sənədinə bax.
-📜 Lisenziya
-
-MIT Lisenziyası — ətraflı məlumat üçün LICENSE sənədinə bax.
+MIT Lisenziyası — bax `LICENSE`.
