@@ -1,8 +1,8 @@
-# Banque de Mémoire & Système d'Agent IA Constitutionnel 🧠
+# Memory Bank & Constitutional AI Agent System 🧠
 
 [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 
-> Un cadre déterministe pour transformer les LLM en ingénieurs logiciels sans état et pilotés par la documentation.
+> Un cadre déterministe pour transformer les LLM en ingénieurs logiciels stateless et pilotés par la documentation.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -17,16 +17,16 @@ Pour fonctionner, il s'appuie **entièrement** sur deux artefacts :
 1.  **Une Constitution (`AGENTS-Constitution.md`)**
     La loi technique non négociable du projet.
 
-2.  **Une Banque de Mémoire (`MemoryBank.md` + fichiers de contexte)**
+2.  **Une Memory Bank (`MemoryBank.md` + fichiers de contexte)**
     Un enregistrement vivant et versionné des objectifs, de l'architecture, des décisions et des progrès.
 
 Cette contrainte devient un super-pouvoir :
 
-> **Documentation parfaite · Raisonnement reproductible · Développement axé sur l'architecture**
+> **Documentation parfaite · Raisonnement reproductible · Architecture-first development**
 
 ---
 
-## 📁 Structure du Référentiel
+## 📁 Structure du Repository
 
 ```text
 memory-bank/
@@ -34,15 +34,15 @@ memory-bank/
 ├── AGENTS-Constitution.md  # Loi technique suprême (règles non négociables)
 ├── projectbrief.md         # "Pourquoi" stratégique et critères de succès
 ├── productContext.md       # Problèmes utilisateurs & objectifs d'expérience
-├── systemPatterns.md       # Architecture & modèles de conception
-├── techContext.md          # Pile technique, outils, contraintes
+├── systemPatterns.md       # Architecture & design patterns
+├── techContext.md          # Tech stack, outils, contraintes
 ├── activeContext.md        # État actuel & focus
 └── progress.md             # Journal d'évolution & historique des décisions
 ```
 
 ---
 
-## 🚀 Démarrage Rapide
+## 🚀 Quick Start
 
 ### 1️⃣ Cloner dans Votre Projet
 
@@ -55,7 +55,7 @@ cp -r memory_bank_and_constitution/memory-bank ./memory-bank
 
 Modifiez `memory-bank/AGENTS-Constitution.md` :
 
-- Ajustez les versions de langue/d'exécution
+- Ajustez les versions de langue/runtime
 - Définissez les couches architecturales
 - Définissez les règles de qualité du code, de test et de conception
 
@@ -66,33 +66,33 @@ Modifiez `memory-bank/AGENTS-Constitution.md` :
 Remplissez ceux-ci en premier :
 
 - `projectbrief.md` — Pourquoi le projet existe
-- `techContext.md` — Pile technique réelle
+- `techContext.md` — Tech stack réelle
 - `systemPatterns.md` — Architecture & limites
 
 ---
 
-## 🤖 Première Invite — Protocole de Démarrage
+## 🤖 Première Prompt — Boot Protocol
 
-Utilisez **exactement** cette invite pour initialiser un agent IA :
+Utilisez **exactement** cette prompt pour initialiser un agent IA :
 
 ```text
-Vous opérez sous un modèle d'exécution sans état.
+Vous opérez sous un modèle d'exécution stateless.
 
-ÉTAPE 1 — CHARGEMENT DE CONTEXTE OBLIGATOIRE
+ÉTAPE 1 — MANDATORY CONTEXT LOAD
 Lisez et internalisez les fichiers suivants du répertoire `memory-bank/` :
 1. MemoryBank.md
 2. AGENTS-Constitution.md
 
 Ne procédez pas tant que les deux ne sont pas entièrement lus.
 
-ÉTAPE 2 — RECONNAISSANCE
+ÉTAPE 2 — ACKNOWLEDGEMENT (RECONNAISSANCE)
 Confirmez explicitement :
 - Vous avez lu et compris les deux fichiers
-- Vous acceptez RAGESe, la Passerelle d'Intégrité du Contexte et l'autorité constitutionnelle
+- Vous acceptez RAGESe, la Context Integrity Gateway et l'autorité constitutionnelle
 - Vous ne supposerez aucune connaissance non documentée
 
-ÉTAPE 3 — ANALYSE DU PROJET
-Analysez la base de code existante.
+ÉTAPE 3 — PROJECT ANALYSIS
+Analysez la codebase existante.
 Identifiez si ces fichiers existent et sont exacts :
 - projectbrief.md
 - productContext.md
@@ -107,9 +107,9 @@ Pour chaque fichier manquant ou obsolète :
 - Dérivez le contenu strictement du code et de la configuration observables
 - N'INVENTEZ PAS d'exigences ou d'architecture
 
-ÉTAPE 5 — PASSERELLE
+ÉTAPE 5 — GATEWAY
 Avant d'évoluer la documentation :
-- Passez la Passerelle d'Intégrité du Contexte
+- Passez la Context Integrity Gateway
 - Escaladez les anomalies pour confirmation
 
 N'écrivez PAS encore de code.
@@ -121,15 +121,15 @@ Répondez UNIQUEMENT avec :
 
 ---
 
-## 🔄 Invite de Travail Quotidienne
+## 🔄 Daily Work Prompt
 
 ```text
 Selon le protocole MemoryBank.md :
 
-- Relisez tous les fichiers de la Banque de Mémoire
+- Relisez tous les fichiers de la Memory Bank
 - Ré-ancrez aux objectifs du projet et à AGENTS-Constitution.md
 
-TÂCHE : [Décrivez la tâche]
+TASK: [Décrivez la tâche]
 
 ARTICLES CONSTITUTIONNELS IMPLIQUÉS :
 - Art. X — [Nom de la règle]
@@ -138,7 +138,7 @@ ARTICLES CONSTITUTIONNELS IMPLIQUÉS :
 Exécutez la tâche.
 
 Avant l'achèvement :
-1. Passez la Passerelle d'Intégrité du Contexte
+1. Passez la Context Integrity Gateway
 2. Mettez à jour :
    - activeContext.md (Changements Récents)
    - progress.md (Journal des Décisions)
@@ -156,16 +156,16 @@ La réponse finale DOIT inclure :
 
 | Étape      | Question Répondue        | Action                                   |
 |------------|--------------------------|------------------------------------------|
-| Retrieve   | Que sais-je ?            | Lire TOUS les fichiers de la Banque de Mémoire |
+| Retrieve   | Que sais-je ?            | Lire TOUS les fichiers de la Memory Bank |
 | Anchor     | Qu'est-ce qui ne peut pas changer ? | Verrouiller sur les objectifs & la Constitution |
 | Ground     | Qu'est-ce qui est réel maintenant ? | Inspecter le code & l'état réels         |
 | Evaluate   | Est-ce que cela correspond ? | Vérifier les règles & l'architecture     |
 | Synthesize | Que faut-il construire ? | Produire une solution                    |
-| evolve     | Comment nous souvenons-nous ? | Mettre à jour la Banque de Mémoire       |
+| evolve     | Comment nous souvenons-nous ? | Mettre à jour la Memory Bank       |
 
 ---
 
-## 🛡️ Passerelle d'Intégrité du Contexte
+## 🛡️ Context Integrity Gateway
 
 Avant toute évolution de la documentation :
 
@@ -177,25 +177,25 @@ C'est la réponse immunitaire du système contre la dérive architecturale.
 
 ---
 
-## 📋 Exemple de Flux de Travail — Ajout d'une Fonctionnalité
+## 📋 Exemple de Workflow — Ajout d'une Fonctionnalité
 
 ```text
 Scénario : Ajouter la fonctionnalité "réinitialisation du mot de passe"
 
-1. L'utilisateur émet l'invite de tâche
+1. L'utilisateur émet la prompt de tâche
 2. L'agent exécute RAGESe :
-   - Lit la Banque de Mémoire
+   - Lit la Memory Bank
    - Valide la Constitution
    - Conçoit d'abord la solution d'interface
    - Écrit les tests et l'implémentation
    - Met à jour la documentation
-3. L'agent passe la Passerelle d'Intégrité du Contexte
+3. L'agent passe la Context Integrity Gateway
 4. L'agent livre le code + les mises à jour de mémoire
 ```
 
 ---
 
-## 🎖️ Meilleures Pratiques
+## 🎖️ Best Practices
 
 - Commencez petit et explicite
 - Personnalisez la Constitution tôt
@@ -218,14 +218,14 @@ Scénario : Ajouter la fonctionnalité "réinitialisation du mot de passe"
 
 ### Ajout de Règles Personnalisées
 - Ajoutez de nouveaux articles constitutionnels
-- Référencez-les dans la Banque de Mémoire & la Passerelle
+- Référencez-les dans la Memory Bank & Gateway
 
 ---
 
 ## ❓ FAQ
 
-**Ai-je besoin de longues invites à chaque fois ?**
-Non. Après le démarrage, de courtes invites basées sur le protocole suffisent.
+**Ai-je besoin de longues prompts à chaque fois ?**
+Non. Après le boot, de courtes prompts basées sur le protocole suffisent.
 
 **Quels modèles fonctionnent le mieux ?**
 Les modèles avec de grandes fenêtres de contexte (GPT-4+, Claude 3.5+, etc.).
@@ -234,15 +234,15 @@ Les modèles avec de grandes fenêtres de contexte (GPT-4+, Claude 3.5+, etc.).
 Non. La cohérence est obligatoire — pas une architecture spécifique.
 
 **Cela peut-il passer à l'échelle pour de grands projets ?**
-Oui. Utilisez des fichiers de Banque de Mémoire hiérarchiques et des résumés.
+Oui. Utilisez des fichiers de Memory Bank hiérarchiques et des résumés.
 
 ---
 
-## 🤝 Contribuer
+## 🤝 Contributing
 
 Nous accueillons :
 - Constitutions pour d'autres langues (Go, Rust, TypeScript)
-- Outils d'automatisation & d'amorçage
+- Outils d'automatisation & boot
 - Études de cas du monde réel
 
 Voir `CONTRIBUTING.md`.

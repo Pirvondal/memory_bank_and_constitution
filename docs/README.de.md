@@ -1,8 +1,8 @@
-# Memory Bank & Konstitutionelles KI-Agentensystem 🧠
+# Memory Bank & Constitutional AI Agent System 🧠
 
 [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 
-> Ein deterministisches Framework zur Transformation von LLMs in zustandslose, dokumentationsgetriebene Softwareentwickler.
+> Ein deterministisches Framework zur Transformation von LLMs in stateless (zustandslose), documentation-driven Software Engineers.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -14,15 +14,15 @@
 Stellen Sie sich einen Expertenentwickler mit perfekter architektonischer Disziplin vor, der nach jeder Sitzung einen vollständigen Gedächtnisverlust erleidet.
 Um zu funktionieren, verlässt er sich **vollständig** auf zwei Artefakte:
 
-1.  **Eine Verfassung (`AGENTS-Constitution.md`)**
+1.  **Eine Constitution (`AGENTS-Constitution.md`)**
     Das nicht verhandelbare technische Gesetz des Projekts.
 
-2.  **Eine Memory Bank (`MemoryBank.md` + Kontextdateien)**
+2.  **Eine Memory Bank (`MemoryBank.md` + Context-Dateien)**
     Ein lebendiger, versionierter Datensatz von Zielen, Architektur, Entscheidungen und Fortschritten.
 
 Diese Einschränkung wird zu einer Superkraft:
 
-> **Perfekte Dokumentation · Reproduzierbare Argumentation · Architektur-gesteuerte Entwicklung**
+> **Perfekte Dokumentation · Reproduzierbare Argumentation · Architecture-first development**
 
 ---
 
@@ -34,7 +34,7 @@ memory-bank/
 ├── AGENTS-Constitution.md  # Oberstes technisches Gesetz (nicht verhandelbare Regeln)
 ├── projectbrief.md         # Strategisches "Warum" und Erfolgskriterien
 ├── productContext.md       # Benutzerprobleme & Erlebnisziele
-├── systemPatterns.md       # Architektur & Designmuster
+├── systemPatterns.md       # Architektur & Design Patterns
 ├── techContext.md          # Tech-Stack, Tools, Einschränkungen
 ├── activeContext.md        # Aktueller Status & Fokus
 └── progress.md             # Evolutionslog & Entscheidungshistorie
@@ -42,7 +42,7 @@ memory-bank/
 
 ---
 
-## 🚀 Schnellstart
+## 🚀 Quick Start
 
 ### 1️⃣ In Ihr Projekt klonen
 
@@ -51,17 +51,17 @@ git clone https://github.com/Pirvondal/memory_bank_and_constitution.git
 cp -r memory_bank_and_constitution/memory-bank ./memory-bank
 ```
 
-### 2️⃣ Die Verfassung anpassen
+### 2️⃣ Die Constitution anpassen
 
 Bearbeiten Sie `memory-bank/AGENTS-Constitution.md`:
 
-- Sprach-/Laufzeitversionen anpassen
+- Sprach-/Runtime-Versionen anpassen
 - Architekturschichten definieren
 - Regeln für Codequalität, Tests und Design festlegen
 
 > ⚠️ Diese Datei fungiert als **Projektgesetz**. Ändern Sie sie bewusst.
 
-### 3️⃣ Ihren Kontext initialisieren
+### 3️⃣ Ihren Context initialisieren
 
 Füllen Sie diese zuerst aus:
 
@@ -71,27 +71,27 @@ Füllen Sie diese zuerst aus:
 
 ---
 
-## 🤖 Erster Prompt — Boot-Protokoll
+## 🤖 Erster Prompt — Boot Protocol
 
 Verwenden Sie **exakt** diesen Prompt, um einen KI-Agenten zu initialisieren:
 
 ```text
-Sie arbeiten unter einem zustandslosen Ausführungsmodell.
+Sie arbeiten unter einem stateless Execution Model.
 
-SCHRITT 1 — OBLIGATORISCHES KONTEXT-LADEN
+SCHRITT 1 — OBLIGATORISCHES CONTEXT LOAD
 Lesen und verinnerlichen Sie die folgenden Dateien aus dem Verzeichnis `memory-bank/`:
 1. MemoryBank.md
 2. AGENTS-Constitution.md
 
 Fahren Sie nicht fort, bis beide vollständig gelesen sind.
 
-SCHRITT 2 — BESTÄTIGUNG
+SCHRITT 2 — ACKNOWLEDGEMENT (BESTÄTIGUNG)
 Bestätigen Sie ausdrücklich:
 - Sie haben beide Dateien gelesen und verstanden
-- Sie akzeptieren RAGESe, das Kontext-Integritäts-Gateway und die verfassungsrechtliche Autorität
+- Sie akzeptieren RAGESe, das Context Integrity Gateway und die constitutional Autorität
 - Sie werden kein undokumentiertes Wissen voraussetzen
 
-SCHRITT 3 — PROJEKTANALYSE
+SCHRITT 3 — PROJECT ANALYSE
 Scannen Sie die vorhandene Codebasis.
 Stellen Sie fest, ob diese Dateien existieren und korrekt sind:
 - projectbrief.md
@@ -109,7 +109,7 @@ Für jede fehlende oder veraltete Datei:
 
 SCHRITT 5 — GATEWAY
 Vor der Weiterentwicklung der Dokumentation:
-- Passieren Sie das Kontext-Integritäts-Gateway
+- Passieren Sie das Context Integrity Gateway
 - Eskalieren Sie Anomalien zur Bestätigung
 
 Schreiben Sie noch KEINEN Code.
@@ -121,7 +121,7 @@ Antworten Sie NUR mit:
 
 ---
 
-## 🔄 Tägliche Arbeitsprompt
+## 🔄 Täglicher Work Prompt
 
 ```text
 Gemäß MemoryBank.md-Protokoll:
@@ -129,20 +129,20 @@ Gemäß MemoryBank.md-Protokoll:
 - Lesen Sie alle Memory Bank-Dateien erneut
 - Verankern Sie sich erneut in den Projektzielen und AGENTS-Constitution.md
 
-AUFGABE: [Beschreiben Sie die Aufgabe]
+TASK: [Beschreiben Sie die Aufgabe]
 
-BETEILIGTE VERFASSUNGSARTIKEL:
+BETEILIGTE CONSTITUTIONAL ARTIKEL:
 - Art. X — [Regelname]
 - Art. Y — [Regelname]
 
 Führen Sie die Aufgabe aus.
 
 Vor Abschluss:
-1. Passieren Sie das Kontext-Integritäts-Gateway
+1. Passieren Sie das Context Integrity Gateway
 2. Aktualisieren Sie:
    - activeContext.md (Kürzliche Änderungen)
    - progress.md (Entscheidungslog)
-3. Bestätigen Sie die volle verfassungsrechtliche Konformität
+3. Bestätigen Sie die volle constitutional Konformität
 
 Die endgültige Antwort MUSS beinhalten:
 - Implementierungszusammenfassung
@@ -154,10 +154,10 @@ Die endgültige Antwort MUSS beinhalten:
 
 ## 🧩 RAGESe-Protokoll
 
-| Schritt    | Beantwortete Frage       | aktion                                   |
+| Schritt    | Beantwortete Frage       | Aktion                                   |
 |------------|--------------------------|------------------------------------------|
 | Retrieve   | Was weiß ich?            | Lies ALLE Memory Bank-Dateien             |
-| Anchor     | Was darf sich nicht ändern? | An Ziele & Verfassung binden              |
+| Anchor     | Was darf sich nicht ändern? | An Ziele & Constitution binden              |
 | Ground     | Was ist jetzt real?      | Tatsächlichen Code & Zustand inspizieren  |
 | Evaluate   | Passt das?               | Regeln & Architektur prüfen               |
 | Synthesize | Was soll gebaut werden?  | Lösung produzieren                        |
@@ -165,7 +165,7 @@ Die endgültige Antwort MUSS beinhalten:
 
 ---
 
-## 🛡️ Kontext-Integritäts-Gateway
+## 🛡️ Context Integrity Gateway
 
 Vor jeder Dokumentationsevolution:
 
@@ -185,11 +185,11 @@ Szenario: "Passwort-Reset"-Funktion hinzufügen
 1. Benutzer gibt Aufgabenprompt aus
 2. Agent führt RAGESe aus:
    - Liest Memory Bank
-   - Validiert Verfassung
+   - Validiert Constitution
    - Entwirft zuerst Interface-Lösung
    - Schreibt Tests und Implementierung
    - Aktualisiert Dokumentation
-3. Agent passiert Kontext-Integritäts-Gateway
+3. Agent passiert Context Integrity Gateway
 4. Agent liefert Code + Speicheraktualisierungen
 ```
 
@@ -198,7 +198,7 @@ Szenario: "Passwort-Reset"-Funktion hinzufügen
 ## 🎖️ Best Practices
 
 - Beginnen Sie klein und explizit
-- Passen Sie die Verfassung frühzeitig an
+- Passen Sie die Constitution frühzeitig an
 - Vertrauen Sie der Anomalieerkennung
 - Überprüfen Sie `progress.md` regelmäßig
 - Bevorzugen Sie Klarheit vor Geschwindigkeit
@@ -208,16 +208,16 @@ Szenario: "Passwort-Reset"-Funktion hinzufügen
 ## 🔧 Anpassungsleitfaden
 
 ### Nicht-Python-Projekte
-- Ändern Sie die Abschnitte zu Laufzeit/Tools in der Verfassung
+- Ändern Sie die Abschnitte zu Runtime/Tools in der Constitution
 - Aktualisieren Sie `techContext.md` entsprechend
 
 ### Andere Architekturen
-- Definieren Sie Schichten in der Verfassung neu
+- Definieren Sie Schichten in der Constitution neu
 - Richten Sie `systemPatterns.md` aus
 - Bewahren Sie Abhängigkeitsregeln
 
 ### Hinzufügen eigener Regeln
-- Fügen Sie neue Verfassungsartikel hinzu
+- Fügen Sie neue Constitutional Artikel hinzu
 - Verweisen Sie in Memory Bank & Gateway darauf
 
 ---
@@ -225,10 +225,10 @@ Szenario: "Passwort-Reset"-Funktion hinzufügen
 ## ❓ FAQ
 
 **Brauche ich jedes Mal lange Prompts?**
-Nein. Nach dem Booten reichen kurze protokollbasierte Prompts aus.
+Nein. Nach dem Booten reichen kurze Protokoll-basierte Prompts aus.
 
 **Welche Modelle funktionieren am besten?**
-Modelle mit großen Kontextfenstern (GPT-4+, Claude 3.5+, usw.).
+Modelle mit großen Context Windows (GPT-4+, Claude 3.5+, usw.).
 
 **Ist Clean Architecture obligatorisch?**
 Nein. Konsistenz ist obligatorisch — keine spezifische Architektur.
@@ -238,11 +238,11 @@ Ja. Verwenden Sie hierarchische Memory Bank-Dateien und Zusammenfassungen.
 
 ---
 
-## 🤝 Mitwirken
+## 🤝 Contributing
 
 Wir begrüßen:
-- Verfassungen für andere Sprachen (Go, Rust, TypeScript)
-- Automatisierungs- & Bootstrap-Tools
+- Constitutions für andere Sprachen (Go, Rust, TypeScript)
+- Automatisierungs- & Boot-Tools
 - Fallstudien aus der realen Welt
 
 Siehe `CONTRIBUTING.md`.

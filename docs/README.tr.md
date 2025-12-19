@@ -1,8 +1,8 @@
-# Bellek Bankası & Anayasal YZ Ajan Sistemi 🧠
+# Memory Bank & Constitutional AI Agent System 🧠
 
 [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 
-> LLM'leri vatansız, dokümantasyon odaklı yazılım mühendislerine dönüştürmek için deterministik bir çerçeve.
+> LLM'leri stateless (durumsuz), dokümantasyon odaklı yazılım mühendislerine dönüştürmek için deterministik bir framework.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -14,35 +14,35 @@
 Her oturumdan sonra tam hafıza kaybı yaşayan, mükemmel mimari disipline sahip uzman bir geliştirici hayal edin.
 İşlev görebilmek için **tamamen** iki şeye güvenir:
 
-1.  **Bir Anayasa (`AGENTS-Constitution.md`)**
+1.  **Bir Constitution (`AGENTS-Constitution.md`)**
     Projenin tartışılmaz teknik yasası.
 
-2.  **Bir Bellek Bankası (`MemoryBank.md` + bağlam dosyaları)**
+2.  **Bir Memory Bank (`MemoryBank.md` + bağlam dosyaları)**
     Hedeflerin, mimarinin, kararların ve ilerlemenin yaşayan, sürümlendirilmiş bir kaydı.
 
 Bu kısıtlama bir süper güce dönüşür:
 
-> **Mükemmel dokümantasyon · Tekrarlanabilir mantık yürütme · Önce mimari yaklaşımı**
+> **Mükemmel dokümantasyon · Tekrarlanabilir mantık yürütme · Architecture-first development**
 
 ---
 
-## 📁 Depo Yapısı
+## 📁 Repository Yapısı
 
 ```text
 memory-bank/
-├── MemoryBank.md           # Operasyonel protokol & RAGESe çerçevesi
+├── MemoryBank.md           # Operasyonel protokol & RAGESe framework'ü
 ├── AGENTS-Constitution.md  # Üstün teknik yasa (tartışılmaz kurallar)
 ├── projectbrief.md         # Stratejik "neden" ve başarı kriterleri
 ├── productContext.md       # Kullanıcı sorunları & deneyim hedefleri
-├── systemPatterns.md       # Mimari & tasarım desenleri
-├── techContext.md          # Teknoloji yığını, araçlar, kısıtlamalar
+├── systemPatterns.md       # Mimari & tasarım desenleri (patterns)
+├── techContext.md          # Tech stack, araçlar, kısıtlamalar
 ├── activeContext.md        # Mevcut durum & odak
 └── progress.md             # Evrim günlüğü & karar geçmişi
 ```
 
 ---
 
-## 🚀 Hızlı Başlangıç
+## 🚀 Quick Start
 
 ### 1️⃣ Projenize Klonlayın
 
@@ -51,48 +51,48 @@ git clone https://github.com/Pirvondal/memory_bank_and_constitution.git
 cp -r memory_bank_and_constitution/memory-bank ./memory-bank
 ```
 
-### 2️⃣ Anayasayı Özelleştirin
+### 2️⃣ Constitution'ı Özelleştirin
 
 `memory-bank/AGENTS-Constitution.md` dosyasını düzenleyin:
 
-- Dil/çalışma zamanı sürümlerini ayarlayın
+- Dil/runtime sürümlerini ayarlayın
 - Mimari katmanları tanımlayın
 - Kod kalitesi, test ve tasarım kurallarını belirleyin
 
 > ⚠️ Bu dosya **proje yasası** işlevi görür. Bilerek ve isteyerek değiştirin.
 
-### 3️⃣ Bağlamınızı Başlatın
+### 3️⃣ Context'inizi Başlatın
 
 Önce bunları doldurun:
 
 - `projectbrief.md` — Proje neden var
-- `techContext.md` — Gerçek teknoloji yığını
+- `techContext.md` — Gerçek tech stack
 - `systemPatterns.md` — Mimari & sınırlar
 
 ---
 
-## 🤖 İlk İstem — Önyükleme Protokolü
+## 🤖 İlk Prompt — Boot Protocol
 
-Bir YZ ajanını başlatmak için **tam olarak** bu istemi kullanın:
+Bir AI ajanını başlatmak için **tam olarak** bu prompt'u kullanın:
 
 ```text
-Vatansız bir yürütme modeli altında çalışıyorsunuz.
+Stateless bir execution model altında çalışıyorsunuz.
 
-ADIM 1 — ZORUNLU BAĞLAM YÜKLEMESİ
+ADIM 1 — ZORUNLU CONTEXT LOAD
 `memory-bank/` dizininden aşağıdaki dosyaları okuyun ve içselleştirin:
 1. MemoryBank.md
 2. AGENTS-Constitution.md
 
 Her ikisi de tamamen okunana kadar ilerlemeyin.
 
-ADIM 2 — ONAY
+ADIM 2 — ACKNOWLEDGEMENT (ONAY)
 Açıkça onaylayın:
 - Her iki dosyayı da okudunuz ve anladınız
-- RAGESe'yi, Bağlam Bütünlüğü Ağ Geçidi'ni ve anayasal otoriteyi kabul ediyorsunuz
+- RAGESe'yi, Context Integrity Gateway'i ve constitutional otoriteyi kabul ediyorsunuz
 - Belgelenmemiş hiçbir bilgi varsaymayacaksınız
 
-ADIM 3 — PROJE ANALİZİ
-Mevcut kod tabanını tarayın.
+ADIM 3 — PROJECT ANALYSIS
+Mevcut codebase'i tarayın.
 Bu dosyaların var olup olmadığını ve doğru olup olmadığını belirleyin:
 - projectbrief.md
 - productContext.md
@@ -104,12 +104,12 @@ Bu dosyaların var olup olmadığını ve doğru olup olmadığını belirleyin:
 ADIM 4 — SENTEZ
 Eksik veya güncel olmayan her dosya için:
 - Oluşturma veya güncelleme önerin
-- İçeriği kesinlikle gözlemlenebilir kod ve yapılandırmadan türetin
+- İçeriği kesinlikle gözlemlenebilir kod ve konfigürasyondan türetin
 - Gereksinimler veya mimari İCAT ETMEYİN
 
-ADIM 5 — AĞ GEÇİDİ
+ADIM 5 — GATEWAY
 Dokümantasyonu geliştirmeden önce:
-- Bağlam Bütünlüğü Ağ Geçidi'ni geçin
+- Context Integrity Gateway'i geçin
 - Anormallikleri onay için yükseltin
 
 Henüz kod yazmayın.
@@ -121,28 +121,28 @@ YALNIZCA şunlarla yanıt verin:
 
 ---
 
-## 🔄 Günlük Çalışma İstemi
+## 🔄 Günlük Çalışma Prompt'u
 
 ```text
 MemoryBank.md protokolü uyarınca:
 
-- Tüm Bellek Bankası dosyalarını yeniden okuyun
+- Tüm Memory Bank dosyalarını yeniden okuyun
 - Proje hedeflerine ve AGENTS-Constitution.md'ye yeniden bağlanın
 
-GÖREV: [Görevi tanımlayın]
+TASK: [Görevi tanımlayın]
 
-İLGİLİ ANAYASAL MADDELER:
+İLGİLİ CONSTITUTIONAL MADDELER:
 - Madde X — [Kural adı]
 - Madde Y — [Kural adı]
 
 Görevi yürütün.
 
 Tamamlamadan önce:
-1. Bağlam Bütünlüğü Ağ Geçidi'ni geçin
+1. Context Integrity Gateway'i geçin
 2. Güncelleyin:
    - activeContext.md (Son Değişiklikler)
    - progress.md (Karar Günlüğü)
-3. Tam anayasal uyumluluğu onaylayın
+3. Tam constitutional uyumluluğu onaylayın
 
 Son yanıt ŞUNLARI İÇERMELİDİR:
 - Uygulama özeti
@@ -156,16 +156,16 @@ Son yanıt ŞUNLARI İÇERMELİDİR:
 
 | Adım       | Cevaplanan Soru          | Eylem                                    |
 |------------|--------------------------|------------------------------------------|
-| Retrieve   | Ne biliyorum?            | TÜM Bellek Bankası dosyalarını oku       |
-| Anchor     | Neyin değişemeyeceği?    | Hedeflere & Anayasaya kilitlen           |
+| Retrieve   | Ne biliyorum?            | TÜM Memory Bank dosyalarını oku          |
+| Anchor     | Neyin değişemeyeceği?    | Hedeflere & Constitution'a kilitlen      |
 | Ground     | Şu anda gerçek olan ne?  | Gerçek kodu & durumu incele              |
 | Evaluate   | Bu uyuyor mu?            | Kuralları & mimariyi kontrol et          |
 | Synthesize | Ne inşa edilmeli?        | Çözüm üret                               |
-| evolve     | Nasıl hatırlıyoruz?      | Bellek Bankasını güncelle                |
+| evolve     | Nasıl hatırlıyoruz?      | Memory Bank'ı güncelle                   |
 
 ---
 
-## 🛡️ Bağlam Bütünlüğü Ağ Geçidi
+## 🛡️ Context Integrity Gateway
 
 Herhangi bir dokümantasyon evriminden önce:
 
@@ -177,28 +177,28 @@ Bu, mimari sapmalara karşı sistemin bağışıklık tepkisidir.
 
 ---
 
-## 📋 Örnek İş Akışı — Özellik Ekleme
+## 📋 Örnek Workflow — Özellik Ekleme
 
 ```text
 Senaryo: "Şifre sıfırlama" özelliği ekle
 
-1. Kullanıcı görev istemini verir
-2. Ajan RAGESe'yi yürütür:
-   - Bellek Bankasını okur
-   - Anayasayı doğrular
+1. Kullanıcı görev prompt'unu verir
+2. Agent RAGESe'yi yürütür:
+   - Memory Bank'ı okur
+   - Constitution'ı doğrular
    - Önce arayüz çözümünü tasarlar
    - Testleri ve uygulamayı yazar
    - Dokümantasyonu günceller
-3. Ajan Bağlam Bütünlüğü Ağ Geçidi'ni geçer
-4. Ajan kodu + hafıza güncellemelerini teslim eder
+3. Agent Context Integrity Gateway'i geçer
+4. Agent kodu + memory güncellemelerini teslim eder
 ```
 
 ---
 
-## 🎖️ En İyi Uygulamalar
+## 🎖️ Best Practices
 
 - Küçük ve açık başlayın
-- Anayasayı erkenden özelleştirin
+- Constitution'ı erkenden özelleştirin
 - Anormallik tespitine güvenin
 - `progress.md` dosyasını düzenli olarak inceleyin
 - Hız yerine netliği tercih edin
@@ -208,47 +208,47 @@ Senaryo: "Şifre sıfırlama" özelliği ekle
 ## 🔧 Uyarlama Kılavuzu
 
 ### Python Olmayan Projeler
-- Anayasa çalışma zamanı/araçlar bölümlerini değiştirin
+- Constitution runtime/araçlar bölümlerini değiştirin
 - `techContext.md` dosyasını buna göre güncelleyin
 
 ### Farklı Mimariler
-- Anayasa'daki katmanları yeniden tanımlayın
+- Constitution'daki katmanları yeniden tanımlayın
 - `systemPatterns.md` dosyasını hizalayın
 - Bağımlılık kurallarını koruyun
 
 ### Özel Kurallar Ekleme
-- Yeni anayasal maddeler ekleyin
-- Bunlara Bellek Bankası & Ağ Geçidi'nde referans verin
+- Yeni constitutional maddeler ekleyin
+- Bunlara Memory Bank & Gateway'de referans verin
 
 ---
 
 ## ❓ SSS
 
-**Her seferinde uzun istemlere ihtiyacım var mı?**
-Hayır. Önyüklemeden sonra, kısa protokol tabanlı istemler yeterlidir.
+**Her seferinde uzun prompt'lara ihtiyacım var mı?**
+Hayır. Boot'tan sonra, kısa protokol tabanlı prompt'lar yeterlidir.
 
 **Hangi modeller en iyi çalışır?**
-Geniş bağlam pencerelerine sahip modeller (GPT-4+, Claude 3.5+, vb.).
+Geniş context pencerelerine sahip modeller (GPT-4+, Claude 3.5+, vb.).
 
-**Temiz Mimari (Clean Architecture) zorunlu mu?**
+**Clean Architecture zorunlu mu?**
 Hayır. Tutarlılık zorunludur — belirli bir mimari değil.
 
 **Bu büyük projelere ölçeklenebilir mi?**
-Evet. Hiyerarşik Bellek Bankası dosyaları ve özetleri kullanın.
+Evet. Hiyerarşik Memory Bank dosyaları ve özetleri kullanın.
 
 ---
 
-## 🤝 Katkıda Bulunma
+## 🤝 Contributing
 
 Şunları memnuniyetle karşılıyoruz:
-- Diğer diller için Anayasalar (Go, Rust, TypeScript)
-- Otomasyon & önyükleme araçları
+- Diğer diller için Constitution'lar (Go, Rust, TypeScript)
+- Otomasyon & boot araçları
 - Gerçek dünya vaka çalışmaları
 
 Bkz. `CONTRIBUTING.md`.
 
 ---
 
-## 📜 Lisans
+## 📜 License
 
-MIT Lisansı — bkz. `LICENSE`.
+MIT License — bkz. `LICENSE`.
