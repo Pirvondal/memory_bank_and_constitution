@@ -1,6 +1,4 @@
 # Memory Bank & Constitutional AI Agent System 🧠
-[English](README.en.md) | [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
-# Memory Bank & Constitutional AI Agent System 🧠
 
 [English](README.en.md) | [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
 

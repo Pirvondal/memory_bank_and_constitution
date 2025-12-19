@@ -1,5 +1,7 @@
 # Memory Bank & Constitutional AI Agent System 🧠
 
+ [Türkçe](README.tr.md) | [Azərbaycan](README.az.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Español](README.es.md)
+
 > A deterministic framework for transforming LLMs into stateless, documentation-driven software engineers.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
